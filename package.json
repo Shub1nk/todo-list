@@ -9,7 +9,9 @@
   "author": "shub1nk@yandex.ru",
   "license": "ISC",
   "devDependencies": {
-    "cz-customizable": "^6.2.0"
+    "@commitlint/cli": "^8.2.0",
+    "cz-customizable": "^6.2.0",
+    "husky": "^3.0.9"
   },
   "config": {
     "commitizen": {
@@ -17,6 +19,11 @@
     },
     "cz-customizable": {
       "config": "config/git/commitizen.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
     }
   }
 }
