@@ -1,3 +1,10 @@
+# libraries
 node_modules
 
+# app
+.vscode
+dist
+
+# files
 yarn.lock
+.DS_Store

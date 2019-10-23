@@ -4,14 +4,27 @@
   "description": "Небольшой проект, созданный в образовательных целях",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shub1nk@yandex.ru",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "@commitlint/cli": "^8.2.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "cz-customizable": "^6.2.0",
-    "husky": "^3.0.9"
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.9",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "config": {
     "commitizen": {
@@ -25,5 +38,9 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
     }
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }
